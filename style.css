@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Lato&display=swap');
+
+body{
+    background: #cccccc;
+}
+
+h2{
+    font-family: 'Cinzel', serif !important;
+}
+
+p{
+    font-family: 'Lato', sans-serif !important;
+}
+
+.bg{
+    backgroud: #cccccc !important;
+}

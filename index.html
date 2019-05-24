@@ -1,0 +1,74 @@
+<?
+    session_start();
+    
+    $_SESSION['auth'] = sha1('encrpyt');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kepler Webservice</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="container mt-5">
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <form>
+               <input type="text" id='search' name="search" class='form-control mx-auto w-50' placeholder='Country name'/>
+               <div class='text-center mt-4'>
+                  <button id="submit" class='btn btn-primary' type='submit'>Search</button>
+               </div>
+            </form>
+        </div>
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <!--<a href="file.php?file=cancrie.jpg&auth=dc65dfc08b64ac13cf3fcb3e954576bcc619061e">-->
+              <!--<img src="img/cancrie.jpg" alt="cancrie" class="w-100 h-100">-->
+            <!--  Click to download-->
+            <!--</a>-->
+            <h1 id="errorMessage" class="display-2 text-center"></h1>
+            <h2 class='text-center' id='name'></h2>
+            <div id='display1' class="row">
+                <div class="col-lg-6 offset-3 mt-2 ">
+                    <img class="h-100 w-100 border-right-0" id='flag' alt="flag"/>
+                </div>
+            </div>
+            <div class="row" id='display2'>
+                <div class="col-lg-6 offset-2 shadow p-3 mb-5 bg-whit mt-3 rounded">
+                    <p class='mt-1 font-weight-bold' id='capital'></p>
+                    <p class='mt-1 font-weight-bold' id='population'></p>
+                    <p class='mt-1 font-weight-bold' id='language'></p>
+                    <p class='mt-1 font-weight-bold' id='timezone'></p>
+                </div>
+                <div class="col-lg-3  shadow p-3 mb-5 bg-whit mt-3 rounded">
+                    <p class='mt-1 font-weight-bold' id='latitude'></p>
+                    <p class='mt-1 font-weight-bold' id='longitude'></p>
+                    <p class='mt-1 font-weight-bold' id='currency'></p>
+                    <p class='mt-1 font-weight-bold'id='callingCodes'></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="file.js"></script>
+</html>
+
